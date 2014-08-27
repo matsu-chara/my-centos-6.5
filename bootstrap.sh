@@ -13,7 +13,7 @@ yum groupinstall -y "Development Tools"
 
 yum install -y nginx
 
-yum install -y --enablerepo=epel mysql mysql-devel mysql-server mysql-utilities
+yum install -y --enablerepo=remi mysql mysql-devel mysql-server mysql-utilities
 /etc/init.d/mysqld start
 yum install -y --enablerepo=remi,remi-php55 php php-opcache php-devel php-mbstring php-mcrypt php-mysqlnd php-pdo php-pecl-xdebug php-cli php-common php-pecl-apcu php-fpm
 

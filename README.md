@@ -2,7 +2,7 @@ git, vim, zshをまともにしたcentos6.5
 
 epel rpforge remi登録済み
 
-nginx(apache), mysql, php入り
+nginx1.6(apache2.2), mysql5.5, php5.5入り
 
 イメージ作成
 ```sh
