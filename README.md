@@ -15,3 +15,8 @@ vagrant box add --name my-centos-6.5 package.box
 vagrant init my-centos-6.5
 vagrant up
 ```
+
+テスト
+```sh
+rake spec
+```
