@@ -9,6 +9,10 @@ describe command('/usr/bin/php -v') do
     it { should return_stdout(/PHP 5.5.[0-9]+/) }
 end
 
+describe command('/usr/local/bin/composer') do
+    it { should return_exit_status 0 }
+end
+
 # php_values = [{'max_execution_time' => 300},
 #               {'memory_limit' => '128M'},
 #               {'post_max_size' => '16M'},
