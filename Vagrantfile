@@ -130,4 +130,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, :path => "script/chara.sh", :privileged => false
 
   # config.vm.provision :shell, :path => "script/apache.sh"
+
+  config.vm.provision :serverspec do |spec|
+    spec.pattern = 'spec/default/*_spec.rb'
+  end
 end
