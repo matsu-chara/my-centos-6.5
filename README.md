@@ -4,6 +4,13 @@ epel rpforge remi登録済み
 
 nginx1.6(apache2.2), mysql5.5, php5.5入り
 
+インストール
+```sh
+git clone https://github.com/matsu-chara/vagrant
+cd vagrant
+vagrant up
+```
+
 イメージ作成
 ```sh
 vagrant vbguest
