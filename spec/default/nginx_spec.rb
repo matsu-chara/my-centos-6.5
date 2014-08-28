@@ -15,5 +15,5 @@ end
 
 describe command('nginx -v') do
     it { should return_exit_status 0 }
-    it { should return_stdout(/nginx version: nginx\/1\.2\.*/) }
+    it { should return_stdout(/nginx version: nginx\/1\.*\.*/) }
 end

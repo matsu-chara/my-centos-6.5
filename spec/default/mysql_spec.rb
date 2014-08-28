@@ -11,5 +11,5 @@ end
 
 describe command('mysql -u root -e "SELECT version()"') do
     it { should return_exit_status 0 }
-    it { should return_stdout(/5\.6\.*/) }
+    it { should return_stdout(/5\.*\.*/) }
 end
