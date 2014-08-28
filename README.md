@@ -6,7 +6,7 @@ nginx1.6(apache2.2), mysql5.5, php5.5入り
 
 インストール
 ```sh
-git clone https://github.com/matsu-chara/vagrant
+git clone https://github.com/matsu-chara/my-centos-6.5
 cd vagrant
 vagrant up
 ```
