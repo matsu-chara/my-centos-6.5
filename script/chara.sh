@@ -1,6 +1,7 @@
 #!/bin/sh
 
 git clone https://github.com/matsu-chara/dotfiles/ ~/.dotfiles
+chmod o+x ~/.dotfiles/setup.sh
 
 ~/.dotfiles/setup.sh
 
