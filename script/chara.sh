@@ -3,9 +3,7 @@
 git clone https://github.com/matsu-chara/dotfiles/ /home/vagrant/.dotfiles
 chown -R vagrant:vagrant /home/vagrant/.dotfiles
 
-sh /home/vagrant/.dotfiles/installScripts/gitInstall.sh
-sh /home/vagrant/.dotfiles/installScripts/zshInstall.sh
-sh /home/vagrant/.dotfiles/installScripts/vimInstall.sh
+find /home/vagrant/.dotfiles/installScripts/*.sh -print0 | xargs -0 -I {} sh {}
 
 sudo -u vagrant sh /home/vagrant/.dotfiles/setup.sh
 
