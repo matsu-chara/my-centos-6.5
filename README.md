@@ -6,8 +6,12 @@ nginx1.6(apache2.2), mysql5.5, php5.5入り
 
 イメージ作成
 ```sh
-vagrant package --base `cat .vagrant/machines/default/virtualbox/id`
-vagrant box add --name my-centos-6.5 package.box
+# on VM (MACアドレスとのマッピングを無効化)
+sudo ln -s -f /dev/null /etc/udev/rules.d/70-persistent-net.rules
+
+# on Host
+vagrant package
+vagrant box add my-centos-6.5 package.box
 ```
 
 イメージ利用
