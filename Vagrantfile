@@ -124,6 +124,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.cache.scope = :box
   end
 
+  if Vagrant.has_plugin?("vagrant-vbguest")
+    # config.vbguest.auto_update = false
+  end
+
   config.vm.provision :shell, :path => "script/bootstrap.sh"
   config.vm.provision :shell, :path => "script/nginx.sh"
   config.vm.provision :shell, :path => "script/mysql.sh"

@@ -5,5 +5,8 @@ yum install -y --enablerepo=remi,remi-php55 php php-opcache php-devel php-mbstri
 cp -f /vagrant/resource/etc/php.ini /etc/php.ini
 cp -f /vagrant/resource/etc/php-fpm.d/www.conf /etc/php-fpm.d/www.conf
 
+/etc/init.d/php-fpm start
+chkconfig php-fpm on
+
 curl -sS https://getcomposer.org/installer | php
 mv -f composer.phar /usr/local/bin/composer
