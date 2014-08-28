@@ -127,7 +127,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, :path => "script/git.sh"
   config.vm.provision :shell, :path => "script/zsh.sh"
   config.vm.provision :shell, :path => "script/vim.sh"
-  config.vm.provision :shell, :path => "script/chara.sh", :privileged => false
+  config.vm.provision :shell, :path => "script/chara.sh"
 
   # config.vm.provision :shell, :path => "script/apache.sh"
 end

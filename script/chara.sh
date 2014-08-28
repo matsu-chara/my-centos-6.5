@@ -1,8 +1,8 @@
 #!/bin/sh
 
-git clone https://github.com/matsu-chara/dotfiles/ ~/.dotfiles
-chmod u+x ~/.dotfiles/setup.sh
+git clone https://github.com/matsu-chara/dotfiles/ /home/vagrant/.dotfiles
+chmod u+x /home/vagrant/.dotfiles/setup.sh
 
-~/.dotfiles/setup.sh
+/home/vagrant/.dotfiles/setup.sh
 
-printf "please execute for changin shell ===> chsh -s /usr/local/bin/zsh\n"
+chsh -s /usr/local/bin/zsh vagrant
