@@ -5,6 +5,8 @@ yum install -y --enablerepo=remi,remi-php55 php php-opcache php-devel php-mbstri
 cp -f /vagrant/resource/etc/php.ini /etc/php.ini
 cp -f /vagrant/resource/etc/php-fpm.d/www.conf /etc/php-fpm.d/www.conf
 
+cp -f /vagrant/resource/var/www/html/index.php /var/www/html/index.php
+
 /etc/init.d/php-fpm start
 chkconfig php-fpm on
 

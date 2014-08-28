@@ -23,12 +23,17 @@ describe file('/etc/php-fpm.d/www.conf') do
   its(:content) { should match(/group = nginx/) }
 end
 
+describe file('/var/www/html/index.php') do
+  it { should be_file }
+end
+
 # php_values = [{'max_execution_time' => 300},
 #               {'memory_limit' => '128M'},
 #               {'post_max_size' => '16M'},
 #               {'upload_max_filesize' => '2M'},
 #               {'max_input_time' => 300},
 #               {'date.timezone' => 'Asia/Tokyo'}]
+
 php_values = [{'date.timezone' => 'Asia/Tokyo'}]
 describe 'PHP config parameters' do
   php_values.each do |php_value|
