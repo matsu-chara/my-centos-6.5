@@ -17,3 +17,8 @@ describe command('/usr/sbin/nginx -v') do
     it { should return_exit_status 0 }
     it { should return_stderr(/nginx version: nginx\/1.[0-9]+.[0-9]+/) }
 end
+
+describe file('/etc/nginx/conf.d/default.conf') do
+  it { should be_file }
+  its(:content) { should match(/root   \/var\/www\/html;/) }
+end
