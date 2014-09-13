@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "opscode-centos-6.5"
+  config.vm.box = "chef/centos-6.5"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -139,7 +139,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # config.vm.provision :shell, :path => "script/apache.sh"
 
-  config.vm.provision :serverspec do |spec|
-    spec.pattern = 'spec/default/*_spec.rb'
+  if Vagrant.has_plugin?("vagrant-serverspec")
+    config.vm.provision :serverspec do |spec|
+      spec.pattern = 'spec/default/*_spec.rb'
+    end
   end
 end
