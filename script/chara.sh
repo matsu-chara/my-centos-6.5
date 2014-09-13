@@ -1,7 +1,7 @@
 #!/bin/sh
 
 git clone https://github.com/matsu-chara/dotfiles/ /home/vagrant/.dotfiles
-chmod u+x /home/vagrant/.dotfiles/setup.sh
+chmod 755 /home/vagrant/.dotfiles/setup.sh
 
 /home/vagrant/.dotfiles/setup.sh
 
